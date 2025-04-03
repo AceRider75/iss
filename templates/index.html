@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map-Based Cargo Management System</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>Options</h2>
+      <button id="close-sidebar">✖</button>
+    </div>
+    <div class="sidebar-content">
+      <!-- Supply Request Form -->
+      <h3>Create Supply Request</h3>
+      <form id="supply-request-form">
+        <label for="item-type">Item Type:</label>
+        <input type="text" id="item-type" name="item-type" required>
+        <button type="submit">Submit Request</button>
+      </form>
+
+      <!-- Logs Section -->
+      <h3>Logs</h3>
+      <div id="log-container" class="logs"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <button id="open-sidebar">☰</button>
+      <select id="map-selector">
+        <option value="map1.png">Map 1</option>
+        <option value="map2.png">Map 2</option>
+        <option value="map3.png">Map 3</option>
+      </select>
+    </div>
+
+    <!-- Map Container -->
+    <div id="main-map" class="map-container">
+      <div id="item-container"></div> <!-- Items will be dynamically added here -->
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
